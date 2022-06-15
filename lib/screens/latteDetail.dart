@@ -100,7 +100,7 @@ class _LatteDetailState extends State with TickerProviderStateMixin {
   }
 
   _buildProductTitle() {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12.0),
       child: Text(
         "Latte",
@@ -173,7 +173,7 @@ class _LatteDetailState extends State with TickerProviderStateMixin {
             child: TabBarView(
               controller: tabController,
               children: [
-                Text(" Caffè Latte 150 mg kafein içerir",
+                Text("Grande bot (470ml) latte'de 150 mg kafein içerir.Bunda buharlaştırılan sütünde büyük payı vardır",
                     style: TextStyle(color: Colors.black)),
                 Text(
                     "Sütün yarısından fazlası servis edilecek bardağa boşaltılır. Cezvede kalan süt blender ile tekrardan köpürtülür. Kahve bardağın kenarından yavaşça bardağa aktarılır. Cezvede kalan köpürtülmüş süt bardağın üzerine aktarılır ve servis edilir.",

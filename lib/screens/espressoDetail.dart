@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class FilterCoffeeDetail extends StatefulWidget {
+class EspressoDetail extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _FilterCoffeeDetailState();
+  State<StatefulWidget> createState() => _EspressoDetailState();
 }
 
-class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
+class _EspressoDetailState extends State with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
     return ListView(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.all(4.0),
+          padding: const EdgeInsets.all(4.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -79,12 +79,12 @@ class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
                 TabBarView(
                   controller: imagesController,
                   children: <Widget>[
-                    Image.asset("assets/FilterCoffee.jpg"),
+                    Image.asset("assets/Espresso.jpg"),
                     Image.asset("assets/CoffeeBean.jpg"),
                   ],
                 ),
                 Container(
-                  alignment: FractionalOffset(0.5, 0.95), //
+                  alignment: const FractionalOffset(0.5, 0.95), //
                   child: TabPageSelector(
                     controller: imagesController,
                     selectedColor: Colors.grey,
@@ -100,10 +100,10 @@ class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
   }
 
   _buildProductTitle() {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12.0),
       child: Text(
-        "Filtre Kahve",
+        "Espresso",
         style: TextStyle(
           fontSize: 16.0,
           color: Colors.black,
@@ -159,11 +159,11 @@ class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
             tabs: <Widget>[
               Tab(
                 child:
-                    Text("Ürün Bilgisi", style: TextStyle(color: Colors.black)),
+                Text("Ürün Bilgisi", style: TextStyle(color: Colors.black)),
               ),
               Tab(
                 child:
-                    Text("Hazırlanışı", style: TextStyle(color: Colors.black)),
+                Text("Hazırlanışı", style: TextStyle(color: Colors.black)),
               ),
             ],
           ),
@@ -173,13 +173,10 @@ class _FilterCoffeeDetailState extends State with TickerProviderStateMixin {
             child: TabBarView(
               controller: tabController,
               children: [
-                Text(" En falza kafein içeren kahve filtre kahvedir, grande boy (470ml) filtre kahve 330mg kafein içermektedir.",
+                Text("Espressonun her bir shotunda 75 mg kafein vardır. Bir çok kahve espresso ile yapılır, koyduğunuz espresso miktarı ile kafein doğru orantılı bir şekilde artacaktır)",
                     style: TextStyle(color: Colors.black)),
                 Text(
-                    "1 French Press ile Filtre Kahve Hazırlama"
-                    "2 Filtre Kahve Makinesi ile Filtre Kahve Hazırlama"
-                    "3 Makinesiz Filtre Kahve Hazırlama "
-                    "-Makinesiz filtre kahve tariflerinde kullanılan yöntemlerden biri filtre torbalarıdır.",
+                    "Espresso için kaynatılmış sıcak suyun yüksek basınçla son derece ince öğütülmüş toz kahveden geçmesi gerekir. Filtre yerine süzgeç kullanılır. Böylece kahve yağının aromatik lezzetinden hiçbir şey kaybolmaz. Sonuç olarak sert ve yoğun bir lezzet içeren kahve elde edilir.",
                     style: TextStyle(color: Colors.black)),
               ],
             ),

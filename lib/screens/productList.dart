@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qcoffee/widgets/caramelMacchiatoInkWell.dart';
+import 'package:qcoffee/widgets/espressoInkWell.dart';
 import '../widgets/americanoInkWell.dart';
 import '../widgets/filterCoffeeInkWell.dart';
 import '../widgets/latteInkWell.dart';
@@ -11,7 +13,7 @@ class ProductList extends StatelessWidget {
     this.context = context;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Kahve Çeşitleri",
           style: TextStyle(color: Colors.black),
         ),
@@ -35,10 +37,12 @@ class ProductList extends StatelessWidget {
     return ListView(
       children: <Widget>[
         _buildFilterWidgets(),
-        _buildFilterCoffee(),
         _buildAmericano(),
-        _buildTurkishCoffee(),
         _buildLatte(),
+        _buildFilterCoffee(),
+        _buildEspresso(),
+        _buildTurkishCoffee(),
+        _buildCaramelMacchiato(),
       ],
     );
   }
@@ -87,17 +91,25 @@ class ProductList extends StatelessWidget {
     return FilterCoffeeInkWell(nameFilterCoffee:"Filtre Kahve ",
         imageUrlFilterCoffee:"assets/FilterCoffee.jpg");
   }
-  _buildAmericano(){
-    return AmericanoInkWell(nameAmericano:"Americano ",
-        imageUrlAmericano:"assets/Americano.jpg");
+  _buildAmericano() {
+    return AmericanoInkWell(nameAmericano: "Americano ",
+        imageUrlAmericano: "assets/Americano.jpg");
+  }
+  _buildLatte() {
+    return LatteInkWell(nameLatte:"Caffe Latte",
+        imageUrlLatte:"assets/Latte.jpg");
   }
   _buildTurkishCoffee() {
     return TurkishCoffeeInkWell(nameTurkishCoffee:"Türk Kahvesi ",
         imageUrlTurkishCoffee:"assets/TurkishCoffee.jpg");
   }
-  _buildLatte() {
-    return LatteInkWell(nameLatte:"Caffe Latte",
-        imageUrlLatte:"assets/Latte.jpg");
+  _buildEspresso() {
+    return EspressoInkWell(nameEspresso:"Espresso ",
+        imageUrlEspresso:"assets/Espresso.jpg");
+  }
+  _buildCaramelMacchiato() {
+    return CaramelMacchiatoInkWell(nameCaramelMacchiato:"Caramel Macchiato ",
+        imageUrlCaramelMacchiato:"assets/CaramelMacchiato.jpg");
   }
 }
 

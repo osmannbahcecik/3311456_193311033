@@ -42,15 +42,15 @@ class _TurkishCoffeeDetailState extends State with TickerProviderStateMixin {
             children: <Widget>[
               _buildProductImages(),
               _buildProductTitle(),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildDivider(size),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildRatingBar(),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildDivider(size),
@@ -100,7 +100,7 @@ class _TurkishCoffeeDetailState extends State with TickerProviderStateMixin {
   }
 
   _buildProductTitle() {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12.0),
       child: Text(
         "Türk Kahvesi",
@@ -173,10 +173,10 @@ class _TurkishCoffeeDetailState extends State with TickerProviderStateMixin {
             child: TabBarView(
               controller: tabController,
               children: [
-                Text("Türk kahvesi 65 mg / 65–75 ml (1 Türk kahvesi fincanı)",
+                Text("Türk kahvesi 65 mg kafein içerir(1 Türk kahvesi fincanı)",
                     style: TextStyle(color: Colors.black)),
                 Text(
-                    "Cezveye her fincan için 2 çay kaşığı Kahve Dünyası Türk Kahvesi ve dilediğiniz kadar şeker ekleyin. Ardından her fincan için 1 Türk kahvesi fincanı soğuk içme suyu koyun. Kahveyi (ve eklediyseniz şekeri) su ile iyice ıslanacak ve çözünecek şekilde karıştırın.",
+                    "Cezveye her fincan için 2 çay kaşığı Türk Kahvesi ve dilediğiniz kadar şeker ekleyin. Ardından her fincan için 1 Türk kahvesi fincanı soğuk içme suyu koyun. Kahveyi (ve eklediyseniz şekeri) su ile iyice ıslanacak ve çözünecek şekilde karıştırın.",
                     style: TextStyle(color: Colors.black)),
               ],
             ),

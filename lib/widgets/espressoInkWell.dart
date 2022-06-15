@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 
-class TurkishCoffeeInkWell extends StatelessWidget {
-  String nameTurkishCoffee;
-  String imageUrlTurkishCoffee;
+class EspressoInkWell extends StatelessWidget {
 
-  TurkishCoffeeInkWell({
-    required this.nameTurkishCoffee,
-    required this.imageUrlTurkishCoffee,
-  });
+  String nameEspresso;
+  String imageUrlEspresso;
+
+  EspressoInkWell(
+      {required this.nameEspresso,
+        required this.imageUrlEspresso,});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        _buildProductItemsCard(context),
+        _buildEspressoCard(context),
       ],
     );
   }
 
-  _buildProductItemsCard(BuildContext context) {
+  _buildEspressoCard(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).pushNamed('/turkishCoffeeDetail');
+        Navigator.of(context).pushNamed('/espressoDetail');
       },
       child: Card(
         child: Row(
           children: <Widget>[
             Container(
-              child: Image.asset(this.imageUrlTurkishCoffee),
+              child: Image.asset(this.imageUrlEspresso),
               height: 250.0,
               width: MediaQuery.of(context).size.width / 2.2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Padding(
@@ -38,7 +38,7 @@ class TurkishCoffeeInkWell extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text(this.nameTurkishCoffee,
+                  Text(this.nameEspresso,
                       style: TextStyle(fontSize: 16.0, color: Colors.black)),
                   const SizedBox(
                     height: 2.0,

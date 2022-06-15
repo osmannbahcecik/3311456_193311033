@@ -11,7 +11,7 @@ class _AmericanoDetailState extends State with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true, //.......................................
+        centerTitle: true,
         leading: IconButton(
             icon: Icon(
               Icons.chevron_left,
@@ -36,21 +36,21 @@ class _AmericanoDetailState extends State with TickerProviderStateMixin {
     return ListView(
       children: <Widget>[
         Container(
-          padding: const EdgeInsets.all(4.0),
-          child: Row(
+          padding: EdgeInsets.all(4.0),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               _buildProductImages(),
               _buildProductTitle(),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildDivider(size),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildRatingBar(),
-              const SizedBox(
+              SizedBox(
                 height: 12.0,
               ),
               _buildDivider(size),
@@ -84,7 +84,7 @@ class _AmericanoDetailState extends State with TickerProviderStateMixin {
                   ],
                 ),
                 Container(
-                  alignment: const FractionalOffset(0.5, 0.95), //
+                  alignment: FractionalOffset(0.5, 0.95), //
                   child: TabPageSelector(
                     controller: imagesController,
                     selectedColor: Colors.grey,
@@ -159,11 +159,11 @@ class _AmericanoDetailState extends State with TickerProviderStateMixin {
             tabs: <Widget>[
               Tab(
                 child:
-                    Text("Ürün Bilgisi", style: TextStyle(color: Colors.black)),
+                Text("Ürün Bilgisi", style: TextStyle(color: Colors.black)),
               ),
               Tab(
                 child:
-                    Text("Hazırlanışı", style: TextStyle(color: Colors.black)),
+                Text("Hazırlanışı", style: TextStyle(color: Colors.black)),
               ),
             ],
           ),
@@ -173,13 +173,9 @@ class _AmericanoDetailState extends State with TickerProviderStateMixin {
             child: TabBarView(
               controller: tabController,
               children: [
-                Text(" 470 ml Americano'da 225mg kafein vardır ",
+                Text(" Grande Boy (470ml) americano 225mg kafein içermektedir",
                     style: TextStyle(color: Colors.black)),
-                Text(
-                    "Malzemeler: sıcak su ve espresso "
-                    "Americano tarifi için öncelikle espresso elde etmelisiniz. 7gr toz kahveden 90°C sıcaklıktaki suyun 9 bar (atmosfer) basınç ile 35 saniye boyunca akarak 25-30 ml arasında espresso elde edin. "
-                    "Isıttığınız suyu maksimum 100ml olacak şekilde espresso üzerine ekleyin. "
-                    "Americano kahveniz hazırdır.",
+                Text("Americano tarifi için öncelikle espresso elde etmelisiniz. İçme suyunu makinenizin ısıtma çubuğu ile veya farklı bir kaynak (kettle gibi) kullanarak ısıtın. Isıttığınız suyu maksimum 100ml olacak şekilde espresso üzerine ekleyin.Americano kahveniz hazırdır.",
                     style: TextStyle(color: Colors.black)),
               ],
             ),

@@ -51,7 +51,7 @@ class _CoffeeInfo extends StatelessWidget {
                 //alignment: Alignment.center,
                 margin: EdgeInsets.only(left: 0, right: 0, top: 250, bottom: 0),
                 child: Text(
-                    "Kahve, kökboyasıgiller familyasının Coffea cinsinde yer alan bir ağaç ve bu ağacın meyve çekirdeklerinin kavrulup öğütülmesi ile elde edilen tozun su ya da süt ile karıştırılmasıyla yapılan içecektir Kahve ağacı gölgede ve bol su ile yetiştirilir. Bundan dolayı fidan şeklinde saksıya ektikten sonra bol su vermeli ve suyu ihmal etmemelisiniz. Toprağı nemli tutmak bu noktada önemlidir. Kahve ağacı yükseklerde yetişmeyi sever Yetişkinlerde günde 3-4 fincan kahve tüketimi yararlı etkiler sağlar. Yani maksimum kafein alımı günde 400 miligram geçmemeli yani 3 tatlı kaşığı kahveyi geçmemeli.",
+                    "Kahve, kökboyasıgiller familyasının Coffea cinsinde yer alan bir ağaç ve bu ağacın meyve çekirdeklerinin kavrulup öğütülmesi ile elde edilen tozun su ya da süt ile karıştırılmasıyla yapılan içecektir Kahve ağacı gölgede ve bol su ile yetiştirilir. Bundan dolayı fidan şeklinde saksıya ektikten sonra bol su vermeli ve suyu ihmal etmemelisiniz. Toprağı nemli tutmak bu noktada önemlidir. Kahve ağacı yükseklerde yetişmeyi sever.",
                     style: TextStyle(
                       color: Colors.white,
                       backgroundColor: Color(0xFF5A2525),
